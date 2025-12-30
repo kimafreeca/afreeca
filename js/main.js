@@ -98,8 +98,8 @@ function showPlatformDetails(platform) {
             <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="this.closest('.fixed').remove()">
                 <i class="fas fa-times text-xl"></i>
             </button>
-            <h3 class="text-2xl font-bold mb-4">${platformName} 뷰봇</h3>
-            <p class="text-gray-600 mb-6">${platformName} 방송을 자동으로 시청하고 참여하는 뷰어 봇 서비스입니다.</p>
+            <h3 class="text-2xl font-bold mb-4">${platformName} 뷰어</h3>
+            <p class="text-gray-600 mb-6">${platformName} 방송을 자동으로 시청하고 참여하는 뷰어 서비스입니다.</p>
             
             <div class="space-y-3 mb-6">
                 <div class="flex items-center text-sm text-gray-500">
