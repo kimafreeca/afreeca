@@ -34,7 +34,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
             min-height: 100vh;
         }
 
@@ -71,7 +71,7 @@
 
         .hero-badge {
             display: inline-block;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+            background: linear-gradient(135deg, #667eea, #764ba2);
             color: white;
             padding: 0.5rem 1.5rem;
             border-radius: 25px;
@@ -111,32 +111,48 @@
             overflow: hidden;
         }
 
-        .platform-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-        }
-
         .platform-card:hover {
             transform: translateY(-10px);
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
         }
 
-        .platform-icon {
-            width: 80px;
-            height: 80px;
+        .platform-logo {
+            width: 100px;
+            height: 100px;
             margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
+            border-radius: 15px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: white;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .afreeca-logo {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+            background-image: url('https://sspark.genspark.ai/cfimages?u1=0J438MsOp%2B4tW0%2FxEz%2FpD6qRi3vY34eZxQ0slt2VMn2gGY9lRCoCEy%2FL33UzoOik%2BxXQ6STySta2OXmAuv3OJrOkV8Ez%2F8RyLWxq2ylVoy2i0nJ95H9NSS03tp%2Fb729JDCGMf46YhlwrdWY%3D&u2=n2j0uKSn5cIEqJnD&width=2560');
+            background-size: 80%;
+        }
+
+        .soop-logo {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+            background-image: url('https://sspark.genspark.ai/cfimages?u1=%2BBm0t6OVhFp7%2F2iDr6vX9nYM%2FoL67mcAy7BhI32NYwguASYirMqCgGD5m5JCQDjrktbDkEhiCg56UarLA4KPQ6W6wbl1O9MbTApzj10FRuSEAscGyK5VbP%2F9&u2=bnf1jwm2XTx0LzRK&width=2560');
+            background-size: 80%;
+        }
+
+        .panda-logo {
+            background: linear-gradient(135deg, #212121, #424242);
+            background-image: url('https://sspark.genspark.ai/cfimages?u1=cs8SINdAi6CiE35yhpoRCW9dmVgPEcpnyqfIoia3%2F1ZXCjI9CWnKtNHOmuXKcNRuFvqJWb%2FYo6lLBA940g9oMgpmw3QhraMagbmTD2dF%2BMCrbVab%2Fa%2FOnWL2oyUkmbomTc%2F3KKOhM8%2BB4zMkzmxapZKeFKG4XwUr%2By0Vz5uLSE4%3D&u2=BXNbACAspXNTST5X&width=2560');
+            background-size: 80%;
+        }
+
+        .popkon-logo {
+            background: linear-gradient(135deg, #F44336, #D32F2F);
+            background-image: url('https://sspark.genspark.ai/cfimages?u1=o%2FybHV%2FWBiSxVPIlgI9AvLFt22%2FQ6NJvpJWKU0SIfo6JOkHhRa2%2ByzJe3QLGubMDst9HgvySvF7FQkijn0rSDAos7gp0Me2Pq1Er%2FrPNZOPY66M3U9SEvzq7qy0cyrwbER%2BRV3QPQyEoZazFGYXcCCifVLQWUe9Y4ORc3ueb8MKsygJ6%2BHAHhUFJCvhcnDSVf2XtNOWQZrORh7UEujI9YajjAI8c0zo%2B86nozGjrTKX3KMPA4Y7r9weECSmP2LEH1IsWgN6GJMek7PO%2FBOhZKMiZP7ZWq4atTw%3D%3D&u2=0fk%2FUgXOSkZIdanJ&width=2560');
+            background-size: 80%;
         }
 
         .platform-name {
@@ -171,6 +187,31 @@
             left: 0;
             color: #4CAF50;
             font-weight: bold;
+        }
+
+        .platform-card.afreeca::before {
+            background: linear-gradient(135deg, #FF6B35, #F7931E);
+        }
+
+        .platform-card.soop::before {
+            background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        }
+
+        .platform-card.panda::before {
+            background: linear-gradient(135deg, #212121, #424242);
+        }
+
+        .platform-card.popkon::before {
+            background: linear-gradient(135deg, #F44336, #D32F2F);
+        }
+
+        .platform-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
         }
 
         .features-section {
@@ -295,10 +336,8 @@
         <section class="platforms-section">
             <h2 class="section-title">지원 플랫폼</h2>
             <div class="platforms-grid">
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fas fa-tv"></i>
-                    </div>
+                <div class="platform-card afreeca">
+                    <div class="platform-logo afreeca-logo"></div>
                     <h3 class="platform-name">아프리카TV 뷰어</h3>
                     <p class="platform-description">실시간 방송 시청, 구독자 증가</p>
                     <ul class="platform-features">
@@ -308,10 +347,8 @@
                     </ul>
                 </div>
 
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fas fa-tree"></i>
-                    </div>
+                <div class="platform-card soop">
+                    <div class="platform-logo soop-logo"></div>
                     <h3 class="platform-name">숲TV 뷰어</h3>
                     <p class="platform-description">숲TV 방송 시청 뷰어 서비스</p>
                     <ul class="platform-features">
@@ -321,10 +358,8 @@
                     </ul>
                 </div>
 
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fas fa-paw"></i>
-                    </div>
+                <div class="platform-card panda">
+                    <div class="platform-logo panda-logo"></div>
                     <h3 class="platform-name">팬더TV 뷰어</h3>
                     <p class="platform-description">팬더TV 실시간 방송 시청 서비스</p>
                     <ul class="platform-features">
@@ -334,10 +369,8 @@
                     </ul>
                 </div>
 
-                <div class="platform-card">
-                    <div class="platform-icon">
-                        <i class="fas fa-popcorn"></i>
-                    </div>
+                <div class="platform-card popkon">
+                    <div class="platform-logo popkon-logo"></div>
                     <h3 class="platform-name">팝콘TV 뷰어</h3>
                     <p class="platform-description">팝콘TV 방송 시청 뷰어</p>
                     <ul class="platform-features">
