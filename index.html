@@ -198,10 +198,6 @@
             background: linear-gradient(135deg, #FF0050, #000000);
         }
 
-        .platform-card.empty::before {
-            background: linear-gradient(135deg, #cccccc, #999999);
-        }
-
         .platform-card::before {
             content: '';
             position: absolute;
@@ -311,6 +307,11 @@
             margin-top: 1rem;
             justify-content: center;
             flex-wrap: wrap;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .contact-buttons.show {
@@ -318,15 +319,18 @@
         }
 
         .contact-btn {
-            display: inline-flex;
+            display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 0.5rem;
-            padding: 0.8rem 1.5rem;
-            border-radius: 25px;
+            padding: 1.5rem 2rem;
+            border-radius: 15px;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            background: white;
+            min-width: 200px;
         }
 
         .contact-btn.telegram {
@@ -372,7 +376,7 @@
             <p class="hero-subtitle">한국 IP 전용 1인1아이피로 아프리카TV, 숲TV, 팬더TV, 팝콘TV의 실시간 방송을 시청하는 최고의 뷰어 서비스</p>
             <span class="hero-badge">365일 24시간 연중무휴</span>
             <br>
-            <a href="#" class="contact-button small" onclick="toggleContact(event)">문의하기</a>
+            <a href="#contact" class="contact-button small" onclick="toggleContact(event)">문의하기</a>
         </div>
     </header>
 
@@ -458,19 +462,6 @@
                         <li>1인 1아이피</li>
                     </ul>
                 </div>
-
-                <div class="platform-card empty">
-                    <div class="platform-logo">
-                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 2rem;">
-                            <i class="fas fa-plus"></i>
-                        </div>
-                    </div>
-                    <h3 class="platform-name">준비중</h3>
-                    <p class="platform-description">추가 플랫폼 준비중</p>
-                    <ul class="platform-features">
-                        <li>향후 지원 예정</li>
-                    </ul>
-                </div>
             </div>
         </section>
 
@@ -535,14 +526,31 @@
             <p class="contact-description">뷰어 봇 서비스에 대해 궁금한 점이 있으신가요?</p>
             <a href="#" class="contact-button" onclick="toggleContact(event)">문의하기</a>
             <div class="contact-buttons" id="contactButtons">
-                <a href="https://t.me/afreeca101" target="_blank" class="contact-btn telegram">
-                    <i class="fab fa-telegram"></i>
-                    텔레그램
-                </a>
-                <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="contact-btn kakao">
-                    <i class="fas fa-comment"></i>
-                    카카오톡
-                </a>
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 0.5rem;">궁금한 점이 있으신가요? 아래 채널로 문의해주세요.</p>
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="contact-btn kakao">
+                        <i class="fas fa-comment" style="font-size: 2rem;"></i>
+                        <div style="text-align: center;">
+                            <div style="font-weight: 700; font-size: 1.1rem;">카카오톡 문의</div>
+                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">실시간 상담 가능</div>
+                            <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
+                        </div>
+                    </a>
+                    <a href="https://t.me/afreeca101" target="_blank" class="contact-btn telegram">
+                        <i class="fab fa-telegram" style="font-size: 2rem;"></i>
+                        <div style="text-align: center;">
+                            <div style="font-weight: 700; font-size: 1.1rem;">텔레그램 문의</div>
+                            <div style="font-size: 0.9rem; color: #ccc; margin-top: 0.3rem;">빠른 응답 보장</div>
+                            <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
+                        </div>
+                    </a>
+                </div>
+                <div style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+                    <div>운영시간: 365일 24시간 연중무휴</div>
+                    <div style="margin-top: 0.5rem; color: #4CAF50; font-weight: 600;">평균 응답시간: 5분 이내</div>
+                </div>
             </div>
         </section>
     </main>
@@ -553,9 +561,11 @@
             const contactButtons = document.getElementById('contactButtons');
             contactButtons.classList.toggle('show');
             
-            // 부드러운 스크롤로 연락처 섹션으로 이동
-            const contactSection = document.getElementById('contact');
-            contactSection.scrollIntoView({ behavior: 'smooth' });
+            // 이미 열려있으면 닫고, 아니면 연락처 섹션으로 스크롤
+            if (contactButtons.classList.contains('show')) {
+                const contactSection = document.getElementById('contact');
+                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
     </script>
 </body>
