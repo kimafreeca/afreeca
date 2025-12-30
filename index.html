@@ -100,33 +100,6 @@
             max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
-            position: relative;
-        }
-
-        /* 5개 항목을 위한 특별한 그리드 배치: 첫 줄 3개, 두 번째 줄 2개 */
-        .platform-card:nth-child(4) {
-            grid-column: 2 / 3;
-        }
-
-        .platform-card:nth-child(5) {
-            grid-column: 3 / 4;
-        }
-
-        /* 반응형 조정 */
-        @media (max-width: 768px) {
-            .platforms-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .platform-card:nth-child(4),
-            .platform-card:nth-child(5) {
-                grid-column: 1;
-            }
-        }
-
-        .platforms-grid::after {
-            content: "";
-            grid-column: 2;
         }
 
         .platform-card {
@@ -218,6 +191,14 @@
 
         .platform-card.chzzk::before {
             background: linear-gradient(135deg, #00D4FF, #0099CC);
+        }
+
+        .platform-card.tiktok::before {
+            background: linear-gradient(135deg, #FF0050, #000000);
+        }
+
+        .platform-card.empty::before {
+            background: linear-gradient(135deg, #cccccc, #999999);
         }
 
         .platform-card::before {
@@ -323,6 +304,45 @@
             box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
         }
 
+        .contact-buttons {
+            display: none;
+            gap: 1rem;
+            margin-top: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-buttons.show {
+            display: flex;
+        }
+
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.8rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .contact-btn.telegram {
+            background: #0088cc;
+            color: white;
+        }
+
+        .contact-btn.kakao {
+            background: #FEE500;
+            color: #3C1E1E;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+
         @media (max-width: 768px) {
             .hero-title {
                 font-size: 2rem;
@@ -406,7 +426,7 @@
 
                 <div class="platform-card chzzk">
                     <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=5a5PrzzjzRq0cNUIJcAC9On6kkNCZfIJQJYFuEgCbXbp92CUYwCjovZRqgfMh7USP1XRxiDeoygg5OTEgXli4%2Bf99CWCl9fGw2XiuFJ68VXOT7XvdpXzZCs42iGNmokLcO%2F7l8eTw79ChZtlB6g3vPj5&u2=1epYsFuPurTB3X1t&width=2560" alt="치지직 로고" class="logo-image">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=mm01VcUJ6rHUPLiPVjLYmWHCBusCEqav9uZh5VcuCS0dDkJY273fgU3Bl92uqb5myQ%2BQE5FJXqfe5mKKdfHvZ7Su7y34Tq0%3D&u2=T2dXF4xevncmu0tj&width=2560" alt="치지직 로고" class="logo-image">
                     </div>
                     <h3 class="platform-name">치지직 뷰어</h3>
                     <p class="platform-description">치지직 실시간 방송 시청 서비스</p>
@@ -416,13 +436,39 @@
                         <li>1인 1아이피</li>
                     </ul>
                 </div>
+
+                <div class="platform-card tiktok">
+                    <div class="platform-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=KyG%2BOvpxXCLVqg09lFnx8YAPoIXBeFaaX8aIZNZpiwfLoYCaDZ2hs71cHN%2BNpNdlcDAWvR0PEgfV2PaVjPddieA1CfuhJkIbxHb4Nyr6lhsk6nc%3D&u2=jVCBQQhECOgCjDNF&width=2560" alt="틱톡 로고" class="logo-image">
+                    </div>
+                    <h3 class="platform-name">틱톡 뷰어</h3>
+                    <p class="platform-description">틱톡 실시간 스트리밍 시청 서비스</p>
+                    <ul class="platform-features">
+                        <li>라이브 스트리밍</li>
+                        <li>한국 IP 전용</li>
+                        <li>1인 1아이피</li>
+                    </ul>
+                </div>
+
+                <div class="platform-card empty">
+                    <div class="platform-logo">
+                        <div style="width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; color: #ccc; font-size: 2rem;">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                    </div>
+                    <h3 class="platform-name">준비중</h3>
+                    <p class="platform-description">추가 플랫폼 준비중</p>
+                    <ul class="platform-features">
+                        <li>향후 지원 예정</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
         <section class="features-section">
             <h2 class="section-title">주요 기능</h2>
             <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
-                최첨단 뷰어 봇 기술로 방송을 더욱 효과적으로
+                최첨단 뷰어 기술로 방송을 더욱 효과적으로
             </p>
             <div class="features-grid">
                 <div class="feature-item">
@@ -430,7 +476,7 @@
                         <i class="fas fa-cog"></i>
                     </div>
                     <h4 class="feature-title">스마트 시스템</h4>
-                    <p class="feature-description">완전 자동화된 방송 시청 시스템으로 24시간 중단 없이 운영</p>
+                    <p class="feature-description">완전 자동화된 시청 시스템으로 24시간 중단 없이 운영</p>
                 </div>
 
                 <div class="feature-item">
@@ -475,11 +521,29 @@
             </div>
         </section>
 
-        <section class="contact-section">
+        <section class="contact-section" id="contact">
             <h2 class="contact-title">연중무휴 24시간 운영</h2>
             <p class="contact-description">뷰어 봇 서비스에 대해 궁금한 점이 있으신가요?</p>
-            <a href="#" class="contact-button">문의하기</a>
+            <a href="#" class="contact-button" onclick="toggleContact(event)">문의하기</a>
+            <div class="contact-buttons" id="contactButtons">
+                <a href="https://t.me/afreeca_service" target="_blank" class="contact-btn telegram">
+                    <i class="fab fa-telegram"></i>
+                    텔레그램
+                </a>
+                <a href="https://open.kakao.com/o/afreeca_service" target="_blank" class="contact-btn kakao">
+                    <i class="fas fa-comment"></i>
+                    카카오톡
+                </a>
+            </div>
         </section>
     </main>
+
+    <script>
+        function toggleContact(event) {
+            event.preventDefault();
+            const contactButtons = document.getElementById('contactButtons');
+            contactButtons.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
