@@ -120,27 +120,21 @@
             width: 120px;
             height: 60px;
             margin: 0 auto 1.5rem;
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 8px;
+            overflow: hidden;
         }
 
-        .afreeca-logo {
-            background-image: url('https://sspark.genspark.ai/cfimages?u1=0hIIrKVjic9ez1y8jUR8U86w7OWrXALlG7WmM69nsedcotIEHuE30Lu%2Bx%2FisF6%2FW18txDHkgKRwlEUOSrVP%2BxfR1GrYQsvbl0gOx4fgcOxbKXg0%3D&u2=GvS4DtmN0NfzJqB1&width=2560');
+        .logo-image {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
         }
 
-        .soop-logo {
-            background-image: url('https://sspark.genspark.ai/cfimages?u1=%2BBm0t6OVhFp7%2F2iDr6vX9nYM%2FoL67mcAy7BhI32NYwguASYirMqCgGD5m5JCQDjrktbDkEhiCg56UarLA4KPQ6W6wbl1O9MbTApzj10FRuSEAscGyK5VbP%2F9&u2=bnf1jwm2XTx0LzRK&width=2560');
-        }
 
-        .panda-logo {
-            background-image: url('https://sspark.genspark.ai/cfimages?u1=cs8SINdAi6CiE35yhpoRCW9dmVgPEcpnyqfIoia3%2F1ZXCjI9CWnKtNHOmuXKcNRuFvqJWb%2FYo6lLBA940g9oMgpmw3QhraMagbmTD2dF%2BMCrbVab%2Fa%2FOnWL2oyUkmbomTc%2F3KKOhM8%2BB4zMkzmxapZKeFKG4XwUr%2By0Vz5uLSE4%3D&u2=BXNbACAspXNTST5X&width=2560');
-        }
-
-        .popkon-logo {
-            background-image: url('https://sspark.genspark.ai/cfimages?u1=o%2FybHV%2FWBiSxVPIlgI9AvLFt22%2FQ6NJvpJWKU0SIfo6JOkHhRa2%2ByzJe3QLGubMDst9HgvySvF7FQkijn0rSDAos7gp0Me2Pq1Er%2FrPNZOPY66M3U9SEvzq7qy0cyrwbER%2BRV3QPQyEoZazFGYXcCCifVLQWUe9Y4ORc3ueb8MKsygJ6%2BHAHhUFJCvhcnDSVf2XtNOWQZrORh7UEujI9YajjAI8c0zo%2B86nozGjrTKX3KMPA4Y7r9weECSmP2LEH1IsWgN6GJMek7PO%2FBOhZKMiZP7ZWq4atTw%3D%3D&u2=0fk%2FUgXOSkZIdanJ&width=2560');
-        }
 
         .platform-name {
             font-size: 1.5rem;
@@ -324,7 +318,9 @@
             <h2 class="section-title">지원 플랫폼</h2>
             <div class="platforms-grid">
                 <div class="platform-card afreeca">
-                    <div class="platform-logo afreeca-logo"></div>
+                    <div class="platform-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=dkVK297lSk2DxhFpMTjWnRMsqTx5kPftnpkUa9HhCoQWS53puenMirBeNnKy96RsBB1Wot4V%2BFF9nht6g%2BjVTuaxUjBorSeRjC159iqgHNhz&u2=gexnxt4QxB2cWWGr&width=2560" alt="아프리카TV 로고" class="logo-image">
+                    </div>
                     <h3 class="platform-name">아프리카TV 뷰어</h3>
                     <p class="platform-description">실시간 방송 시청, 구독자 증가</p>
                     <ul class="platform-features">
@@ -335,7 +331,9 @@
                 </div>
 
                 <div class="platform-card soop">
-                    <div class="platform-logo soop-logo"></div>
+                    <div class="platform-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=OkxQrcG%2FRmlj3FIKMvwTGjJdMQab%2F4lVEUfyjstoKWJleEcftaCBtdkh5Qw8WCPjZ4pGdUClKeQlukNEeh0Ui7%2F88rIh99kwYMqOStXFnddQ9FU7ni%2F3BgBeVVFFWMoo8KvlD4qWT26E44hDgXTIwFbQ0zjwgwRNAlZR75z2vMY%3D&u2=bui2l7trPQ30fQ%2BP&width=2560" alt="숲TV 로고" class="logo-image">
+                    </div>
                     <h3 class="platform-name">숲TV 뷰어</h3>
                     <p class="platform-description">숲TV 방송 시청 뷰어 서비스</p>
                     <ul class="platform-features">
@@ -346,7 +344,9 @@
                 </div>
 
                 <div class="platform-card panda">
-                    <div class="platform-logo panda-logo"></div>
+                    <div class="platform-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=cs8SINdAi6CiE35yhpoRCW9dmVgPEcpnyqfIoia3%2F1ZXCjI9CWnKtNHOmuXKcNRuFvqJWb%2FYo6lLBA940g9oMgpmw3QhraMagbmTD2dF%2BMCrbVab%2Fa%2FOnWL2oyUkmbomTc%2F3KKOhM8%2BB4zMkzmxapZKeFKG4XwUr%2By0Vz5uLSE4%3D&u2=BXNbACAspXNTST5X&width=2560" alt="팬더TV 로고" class="logo-image">
+                    </div>
                     <h3 class="platform-name">팬더TV 뷰어</h3>
                     <p class="platform-description">팬더TV 실시간 방송 시청 서비스</p>
                     <ul class="platform-features">
@@ -357,7 +357,9 @@
                 </div>
 
                 <div class="platform-card popkon">
-                    <div class="platform-logo popkon-logo"></div>
+                    <div class="platform-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=0xHQa7gJF96UzeUl3exsx8IJ2QiAHK4n3W%2BShLSjIyrdWzu%2FihcRtk3TyavDVrYBZ7XDqgd%2BhvMRkhfxDVnz96QWXhwB4lKGFLyTDq8aG2xU0wIdss6cGAo6sksBYqAVutD5N7n8XIhPoxa%2FRgc9jAe638xYBvXTe432IMexn9q8NFSo&u2=4brLBqisQKpAz82o&width=2560" alt="팝콘TV 로고" class="logo-image">
+                    </div>
                     <h3 class="platform-name">팝콘TV 뷰어</h3>
                     <p class="platform-description">팝콘TV 방송 시청 뷰어</p>
                     <ul class="platform-features">
