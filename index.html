@@ -94,9 +94,39 @@
 
         .platforms-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
             margin-bottom: 4rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+        }
+
+        /* 5개 항목을 위한 특별한 그리드 배치: 첫 줄 3개, 두 번째 줄 2개 */
+        .platform-card:nth-child(4) {
+            grid-column: 2 / 3;
+        }
+
+        .platform-card:nth-child(5) {
+            grid-column: 3 / 4;
+        }
+
+        /* 반응형 조정 */
+        @media (max-width: 768px) {
+            .platforms-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .platform-card:nth-child(4),
+            .platform-card:nth-child(5) {
+                grid-column: 1;
+            }
+        }
+
+        .platforms-grid::after {
+            content: "";
+            grid-column: 2;
         }
 
         .platform-card {
@@ -184,6 +214,10 @@
 
         .platform-card.popkon::before {
             background: linear-gradient(135deg, #F44336, #D32F2F);
+        }
+
+        .platform-card.chzzk::before {
+            background: linear-gradient(135deg, #00D4FF, #0099CC);
         }
 
         .platform-card::before {
@@ -365,6 +399,19 @@
                     <ul class="platform-features">
                         <li>실시간 모니터링</li>
                         <li>시청 통계</li>
+                        <li>한국 IP 전용</li>
+                        <li>1인 1아이피</li>
+                    </ul>
+                </div>
+
+                <div class="platform-card chzzk">
+                    <div class="platform-logo">
+                        <img src="https://sspark.genspark.ai/cfimages?u1=5a5PrzzjzRq0cNUIJcAC9On6kkNCZfIJQJYFuEgCbXbp92CUYwCjovZRqgfMh7USP1XRxiDeoygg5OTEgXli4%2Bf99CWCl9fGw2XiuFJ68VXOT7XvdpXzZCs42iGNmokLcO%2F7l8eTw79ChZtlB6g3vPj5&u2=1epYsFuPurTB3X1t&width=2560" alt="치지직 로고" class="logo-image">
+                    </div>
+                    <h3 class="platform-name">치지직 뷰어</h3>
+                    <p class="platform-description">치지직 실시간 방송 시청 서비스</p>
+                    <ul class="platform-features">
+                        <li>실시간 스트리밍</li>
                         <li>한국 IP 전용</li>
                         <li>1인 1아이피</li>
                     </ul>
