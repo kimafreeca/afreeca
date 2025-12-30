@@ -311,7 +311,7 @@
             border-radius: 20px;
             padding: 3rem;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
+            z-index: 1001;
             max-width: 600px;
             width: 90%;
             max-height: 80vh;
@@ -319,7 +319,22 @@
         }
 
         .contact-buttons.show {
-            display: flex;
+            display: block !important;
+        }
+
+        .contact-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 1000;
+        }
+
+        .contact-overlay.show {
+            display: block !important;
         }
 
         .contact-btn {
@@ -531,11 +546,11 @@
             </div>
         </section>
 
-        <section class="contact-section" id="contact" onclick="closeContact(event)">
+        <section class="contact-section" id="contact">
             <h2 class="contact-title">연중무휴 24시간 운영</h2>
             <p class="contact-description">뷰어 봇 서비스에 대해 궁금한 점이 있으신가요?</p>
             <a href="#" class="contact-button large" onclick="toggleContact(event)">문의하기</a>
-            <div class="contact-buttons" id="contactButtons" onclick="event.stopPropagation()">
+            <div class="contact-buttons" id="contactButtons">
             <div style="text-align: center; margin-bottom: 2rem;">
                 <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 0.5rem;">궁금한 점이 있으신가요?</h3>
                 <p style="color: #666; font-size: 1.1rem;">아래 채널로 문의해주세요.</p>
@@ -564,26 +579,49 @@
                 </div>
             </div>
         </section>
-        <div style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;" id="contactOverlay" onclick="closeContact(event)"></div>
+        <div class="contact-overlay" id="contactOverlay"></div>
     </main>
 
     <script>
         function toggleContact(event) {
             event.preventDefault();
+            event.stopPropagation();
+            
             const contactButtons = document.getElementById('contactButtons');
             const overlay = document.getElementById('contactOverlay');
-            contactButtons.classList.toggle('show');
-            overlay.style.display = contactButtons.classList.contains('show') ? 'block' : 'none';
+            
+            // 토글 방식으로 변경
+            if (contactButtons.classList.contains('show')) {
+                contactButtons.classList.remove('show');
+                overlay.classList.remove('show');
+            } else {
+                contactButtons.classList.add('show');
+                overlay.classList.add('show');
+            }
         }
 
-        function closeContact(event) {
-            if (event.target.id === 'contactOverlay' || event.target.id === 'contact') {
+        // 오버레이 클릭 시 닫기
+        document.getElementById('contactOverlay').addEventListener('click', function() {
+            const contactButtons = document.getElementById('contactButtons');
+            const overlay = document.getElementById('contactOverlay');
+            contactButtons.classList.remove('show');
+            overlay.classList.remove('show');
+        });
+
+        // 팝업 내부 클릭 시 닫히지 않도록 방지
+        document.getElementById('contactButtons').addEventListener('click', function(event) {
+            event.stopPropagation();
+        });
+
+        // ESC 키로 닫기
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
                 const contactButtons = document.getElementById('contactButtons');
                 const overlay = document.getElementById('contactOverlay');
                 contactButtons.classList.remove('show');
-                overlay.style.display = 'none';
+                overlay.classList.remove('show');
             }
-        }
+        });
     </script>
 </body>
 </html>
