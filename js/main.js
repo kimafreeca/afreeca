@@ -99,12 +99,12 @@ function showPlatformDetails(platform) {
                 <i class="fas fa-times text-xl"></i>
             </button>
             <h3 class="text-2xl font-bold mb-4">${platformName} 뷰어</h3>
-            <p class="text-gray-600 mb-6">${platformName} 방송을 자동으로 시청하고 참여하는 뷰어 서비스입니다.</p>
+            <p class="text-gray-600 mb-6">${platformName} 방송을  시청하고 참여하는 뷰어 서비스입니다.</p>
             
             <div class="space-y-3 mb-6">
                 <div class="flex items-center text-sm text-gray-500">
                     <i class="fas fa-check text-green-500 mr-2"></i>
-                    실시간 방송 자동 감지
+                    
                 </div>
                 <div class="flex items-center text-sm text-gray-500">
                     <i class="fas fa-check text-green-500 mr-2"></i>
@@ -245,9 +245,9 @@ document.addEventListener('DOMContentLoaded', checkServiceStatus);
 // SEO optimization - Update page title based on visibility
 document.addEventListener('visibilitychange', function() {
     if (document.hidden) {
-        document.title = '방송국 뷰어 봇 - 자동 방송 시청';
+        document.title = '방송국 뷰어 봇 -  방송 시청';
     } else {
-        document.title = '방송국 뷰어 봇 - 아프리카TV 숲TV 팬더TV 팝콘TV 자동 시청';
+        document.title = '방송국 뷰어 봇 - 아프리카TV 숲TV 팬더TV 팝콘TV  시청';
     }
 });
 
@@ -286,7 +286,8 @@ window.openContactModal = function() {
             <button class="absolute top-4 right-4 text-gray-500 hover:text-gray-700" onclick="this.closest('.fixed').remove()">
                 <i class="fas fa-times text-xl"></i>
             </button>
-            <h3 class="text-2xl font-bold mb-6 text-center">문의하기</h3>
+            <h3 class="text-2xl font-bold mb-6 text-center">문의하기<
+            /h3>
             <p class="text-gray-600 mb-6 text-center">궁금한 점이 있으신가요? 아래 채널로 문의해주세요.</p>
             
             <div class="space-y-4">
