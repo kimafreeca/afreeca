@@ -34,7 +34,7 @@
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
         }
 
@@ -52,6 +52,44 @@
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
             margin-bottom: 3rem;
             border-radius: 0 0 20px 20px;
+            position: relative;
+        }
+
+        .header-contact-icons {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .header-contact-icon.kakao {
+            background: #FEE500;
+            color: #3C1E1E;
+        }
+
+        .header-contact-icon.telegram {
+            background: #0088cc;
+            color: white;
+        }
+
+        .header-contact-icon:hover {
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
         }
 
         .hero-title {
@@ -82,15 +120,20 @@
 
         .platforms-section {
             margin: 4rem 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
         }
 
         .section-title {
             text-align: center;
             font-size: 2.5rem;
             font-weight: 700;
-            color: white;
+            color: #333;
             margin-bottom: 3rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
         }
 
         .platforms-grid {
@@ -104,20 +147,20 @@
         }
 
         .platform-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            background: white;
             border-radius: 20px;
             padding: 2.5rem;
             text-align: center;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
+            border: 1px solid #f0f0f0;
         }
 
         .platform-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
         }
 
         .platform-logo {
@@ -214,6 +257,7 @@
             padding: 3rem;
             margin: 4rem 0;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .features-grid {
@@ -268,6 +312,7 @@
             backdrop-filter: blur(10px);
             border-radius: 20px;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .contact-title {
@@ -294,6 +339,8 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+            border: none;
+            cursor: pointer;
         }
 
         .contact-button:hover {
@@ -377,6 +424,14 @@
 <body>
     <header>
         <div class="container">
+            <div class="header-contact-icons">
+                <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="header-contact-icon kakao" title="카카오톡 문의">
+                    <i class="fas fa-comment"></i>
+                </a>
+                <a href="https://t.me/afreeca101" target="_blank" class="header-contact-icon telegram" title="텔레그램 문의">
+                    <i class="fab fa-telegram"></i>
+                </a>
+            </div>
             <h1 class="hero-title">방송국 시청 뷰어 서비스</h1>
             <p class="hero-subtitle">한국 IP 전용 1인1아이피로 아프리카TV, 숲TV, 팬더TV, 팝콘TV의 실시간 방송을 시청하는 최고의 뷰어 서비스</p>
             <span class="hero-badge">365일 24시간 연중무휴</span>
