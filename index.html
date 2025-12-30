@@ -311,30 +311,9 @@
             border-radius: 20px;
             padding: 3rem;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            z-index: 1001;
+            z-index: 1000;
             max-width: 600px;
             width: 90%;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-
-        .contact-buttons.show {
-            display: block !important;
-        }
-
-        .contact-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.5);
-            z-index: 1000;
-        }
-
-        .contact-overlay.show {
-            display: block !important;
         }
 
         .contact-btn {
@@ -550,78 +529,44 @@
             <h2 class="contact-title">연중무휴 24시간 운영</h2>
             <p class="contact-description">뷰어 봇 서비스에 대해 궁금한 점이 있으신가요?</p>
             <a href="#" class="contact-button large" onclick="toggleContact(event)">문의하기</a>
-            <div class="contact-buttons" id="contactButtons">
+        </section>
+
+        <!-- 문의하기 팝업 -->
+        <div class="contact-buttons" id="contactButtons">
             <div style="text-align: center; margin-bottom: 2rem;">
                 <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 0.5rem;">궁금한 점이 있으신가요?</h3>
                 <p style="color: #666; font-size: 1.1rem;">아래 채널로 문의해주세요.</p>
             </div>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="contact-btn kakao">
-                        <i class="fas fa-comment" style="font-size: 2rem;"></i>
-                        <div style="text-align: center;">
-                            <div style="font-weight: 700; font-size: 1.1rem;">카카오톡 문의</div>
-                            <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">실시간 상담 가능</div>
-                            <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
-                        </div>
-                    </a>
-                    <a href="https://t.me/afreeca101" target="_blank" class="contact-btn telegram">
-                        <i class="fab fa-telegram" style="font-size: 2rem;"></i>
-                        <div style="text-align: center;">
-                            <div style="font-weight: 700; font-size: 1.1rem;">텔레그램 문의</div>
-                            <div style="font-size: 0.9rem; color: #ccc; margin-top: 0.3rem;">빠른 응답 보장</div>
-                            <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
-                        </div>
-                    </a>
-                </div>
-                <div style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
-                    <div>운영시간: 365일 24시간 연중무휴</div>
-                    <div style="margin-top: 0.5rem; color: #4CAF50; font-weight: 600;">평균 응답시간: 5분 이내</div>
-                </div>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="contact-btn kakao">
+                    <i class="fas fa-comment" style="font-size: 2rem;"></i>
+                    <div style="text-align: center;">
+                        <div style="font-weight: 700; font-size: 1.1rem;">카카오톡 문의</div>
+                        <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">실시간 상담 가능</div>
+                        <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
+                    </div>
+                </a>
+                <a href="https://t.me/afreeca101" target="_blank" class="contact-btn telegram">
+                    <i class="fab fa-telegram" style="font-size: 2rem;"></i>
+                    <div style="text-align: center;">
+                        <div style="font-weight: 700; font-size: 1.1rem;">텔레그램 문의</div>
+                        <div style="font-size: 0.9rem; color: #ccc; margin-top: 0.3rem;">빠른 응답 보장</div>
+                        <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
+                    </div>
+                </a>
             </div>
-        </section>
-        <div class="contact-overlay" id="contactOverlay"></div>
-    </main>
+            <div style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
+                <div>운영시간: 365일 24시간 연중무휴</div>
+                <div style="margin-top: 0.5rem; color: #4CAF50; font-weight: 600;">평균 응답시간: 5분 이내</div>
+            </div>
+        </div>
 
     <script>
         function toggleContact(event) {
             event.preventDefault();
-            event.stopPropagation();
-            
             const contactButtons = document.getElementById('contactButtons');
-            const overlay = document.getElementById('contactOverlay');
-            
-            // 토글 방식으로 변경
-            if (contactButtons.classList.contains('show')) {
-                contactButtons.classList.remove('show');
-                overlay.classList.remove('show');
-            } else {
-                contactButtons.classList.add('show');
-                overlay.classList.add('show');
-            }
+            contactButtons.style.display = contactButtons.style.display === 'block' ? 'none' : 'block';
         }
-
-        // 오버레이 클릭 시 닫기
-        document.getElementById('contactOverlay').addEventListener('click', function() {
-            const contactButtons = document.getElementById('contactButtons');
-            const overlay = document.getElementById('contactOverlay');
-            contactButtons.classList.remove('show');
-            overlay.classList.remove('show');
-        });
-
-        // 팝업 내부 클릭 시 닫히지 않도록 방지
-        document.getElementById('contactButtons').addEventListener('click', function(event) {
-            event.stopPropagation();
-        });
-
-        // ESC 키로 닫기
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const contactButtons = document.getElementById('contactButtons');
-                const overlay = document.getElementById('contactOverlay');
-                contactButtons.classList.remove('show');
-                overlay.classList.remove('show');
-            }
-        });
     </script>
 </body>
 </html>
