@@ -303,15 +303,19 @@
 
         .contact-buttons {
             display: none;
-            gap: 1rem;
-            margin-top: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
             border-radius: 20px;
-            padding: 2rem;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            max-width: 600px;
+            width: 90%;
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
         .contact-buttons.show {
@@ -349,8 +353,14 @@
         }
 
         .contact-button.small {
-            font-size: 0.8rem;
-            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            padding: 0.8rem 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact-button.large {
+            font-size: 1.3rem;
+            padding: 1.2rem 2.5rem;
             margin-top: 1rem;
         }
 
@@ -376,7 +386,7 @@
             <p class="hero-subtitle">한국 IP 전용 1인1아이피로 아프리카TV, 숲TV, 팬더TV, 팝콘TV의 실시간 방송을 시청하는 최고의 뷰어 서비스</p>
             <span class="hero-badge">365일 24시간 연중무휴</span>
             <br>
-            <a href="#contact" class="contact-button small" onclick="toggleContact(event)">문의하기</a>
+            <a href="#" class="contact-button large" onclick="toggleContact(event)">문의하기</a>
         </div>
     </header>
 
@@ -521,14 +531,15 @@
             </div>
         </section>
 
-        <section class="contact-section" id="contact">
+        <section class="contact-section" id="contact" onclick="closeContact(event)">
             <h2 class="contact-title">연중무휴 24시간 운영</h2>
             <p class="contact-description">뷰어 봇 서비스에 대해 궁금한 점이 있으신가요?</p>
-            <a href="#" class="contact-button" onclick="toggleContact(event)">문의하기</a>
-            <div class="contact-buttons" id="contactButtons">
-                <div style="text-align: center; margin-bottom: 1.5rem;">
-                    <p style="color: #666; font-size: 1.1rem; margin-bottom: 0.5rem;">궁금한 점이 있으신가요? 아래 채널로 문의해주세요.</p>
-                </div>
+            <a href="#" class="contact-button large" onclick="toggleContact(event)">문의하기</a>
+            <div class="contact-buttons" id="contactButtons" onclick="event.stopPropagation()">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 0.5rem;">궁금한 점이 있으신가요?</h3>
+                <p style="color: #666; font-size: 1.1rem;">아래 채널로 문의해주세요.</p>
+            </div>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                     <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="contact-btn kakao">
                         <i class="fas fa-comment" style="font-size: 2rem;"></i>
@@ -553,18 +564,24 @@
                 </div>
             </div>
         </section>
+        <div style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 999;" id="contactOverlay" onclick="closeContact(event)"></div>
     </main>
 
     <script>
         function toggleContact(event) {
             event.preventDefault();
             const contactButtons = document.getElementById('contactButtons');
+            const overlay = document.getElementById('contactOverlay');
             contactButtons.classList.toggle('show');
-            
-            // 이미 열려있으면 닫고, 아니면 연락처 섹션으로 스크롤
-            if (contactButtons.classList.contains('show')) {
-                const contactSection = document.getElementById('contact');
-                contactSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            overlay.style.display = contactButtons.classList.contains('show') ? 'block' : 'none';
+        }
+
+        function closeContact(event) {
+            if (event.target.id === 'contactOverlay' || event.target.id === 'contact') {
+                const contactButtons = document.getElementById('contactButtons');
+                const overlay = document.getElementById('contactOverlay');
+                contactButtons.classList.remove('show');
+                overlay.style.display = 'none';
             }
         }
     </script>
