@@ -849,6 +849,35 @@
         padding: 34px 22px 24px;
       }
     }
+    .contact-modal {
+    padding: 34px 22px 24px;
+}
+
+.floating-contact {
+    position: fixed;
+    right: 30px;
+    top: 180px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.floating-contact a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.floating-contact img {
+    width: 35px;
+    height: 35px;
+}
   </style>
 </head>
 
@@ -1262,5 +1291,14 @@
       }
     });
   </script>
+  <div class="floating-contact">
+    <a href="https://open.kakao.com/o/카카오링크" target="_blank" class="kakao-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e3/KakaoTalk_logo.svg">
+    </a>
+
+    <a href="https://t.me/afreeca101" target="_blank" class="telegram-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg">
+    </a>
+</div>
 </body>
 </html>
