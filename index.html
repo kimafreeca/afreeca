@@ -1,777 +1,1266 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>아프리카TV뷰봇 | 숲TV뷰봇 | 팬더TV뷰봇 | 팝콘TV뷰봇 - 방송국 시청 뷰어 서비스</title>
-    <meta name="description" content="아프리카TV뷰봇, 숲TV뷰봇, 팬더TV뷰봇, 팝콘TV뷰어 서비스. 한국 IP 전용 1인1아이피 방송국 뷰어. 365일 24시간 연중무휴 운영">
-    <meta name="keywords" content="아프리카tv뷰봇, 숲tv뷰봇, 팬더tv뷰봇, 팝콘tv뷰봇, 방송국뷰봇, 한국ip뷰어, 1인1아이피, 연중무휴, 24시간운영">
-    <meta name="author" content="방송국 뷰어 서비스">
-    <meta name="robots" content="index, follow">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    
-    <meta property="og:title" content="아프리카TV뷰봇 | 숲TV뷰봇 | 팬더TV뷰봇 | 팝콘TV뷰봇 - 방송국 시청 뷰어 서비스">
-    <meta property="og:description" content="아프리카TV뷰봇, 숲TV뷰봇, 팬더TV뷰봇, 팝콘TV뷰어 서비스. 한국 IP 전용 1인1아이피 방송국 뷰어. 365일 24시간 연중무휴 운영">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://kimafreeca.github.io/afreeca/">
-    <meta property="og:site_name" content="방송국 뷰어 서비스">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="아프리카TV뷰봇 | 숲TV뷰봇 | 팬더TV뷰봇 | 팝콘TV뷰봇 - 방송국 시청 뷰어 서비스">
-    <meta name="twitter:description" content="아프리카TV뷰봇, 숲TV뷰봇, 팬더TV뷰봇, 팝콘TV뷰어 서비스. 한국 IP 전용 1인1아이피 방송국 뷰어. 365일 24시간 연중무휴 운영">
-    <link rel="canonical" href="https://kimafreeca.github.io/afreeca/">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V20D77K23Q"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-V20D77K23Q');
-    </script>
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: white;
-            min-height: 100vh;
-            scroll-behavior: smooth;
-        }
+  <title>숲TV 뷰봇 | SOOP 뷰봇 | 팝콘TV 뷰봇 | 팬더TV 뷰봇</title>
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+  <meta
+    name="description"
+    content="숲TV 뷰봇과 SOOP 뷰봇을 중심으로 팝콘TV 뷰봇, 팬더TV 뷰봇, 아프리카TV 방송 시청자 관리 서비스를 안내합니다."
+  >
 
-        /* 네비게이션 스타일 */
-        nav {
-            background: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border-bottom: 1px solid #e0e0e0;
-        }
+  <meta
+    name="keywords"
+    content="숲TV뷰봇, 숲뷰봇, SOOP뷰봇, 팝콘TV뷰봇, 팬더TV뷰봇, 아프리카TV뷰봇, 방송시청자관리"
+  >
 
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+  <meta name="author" content="방송 시청자 관리 서비스">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="googlebot" content="index, follow">
 
-        .nav-logo {
-            color: #333;
-            font-size: 1.3rem;
-            font-weight: 700;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+  <link rel="canonical" href="https://kimafreeca.github.io/afreeca/">
 
-        .nav-logo:hover {
-            color: #667eea;
-        }
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:url" content="https://kimafreeca.github.io/afreeca/">
+  <meta property="og:site_name" content="방송 시청자 관리 서비스">
+  <meta property="og:title" content="숲TV 뷰봇 | SOOP 뷰봇 | 팝콘TV 뷰봇 | 팬더TV 뷰봇">
+  <meta
+    property="og:description"
+    content="숲TV와 SOOP을 비롯한 다양한 실시간 방송 플랫폼의 시청자 관리 서비스 안내."
+  >
 
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-            margin: 0;
-            padding: 0;
-        }
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="숲TV 뷰봇 | SOOP 뷰봇 | 팝콘TV 뷰봇 | 팬더TV 뷰봇">
+  <meta
+    name="twitter:description"
+    content="숲TV와 SOOP을 중심으로 다양한 실시간 방송 플랫폼의 시청자 관리 서비스를 안내합니다."
+  >
 
-        .nav-menu a {
-            color: #555;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-            position: relative;
-        }
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
 
-        .nav-menu a:hover {
-            color: #667eea;
-            background: rgba(102, 126, 234, 0.1);
-        }
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-V20D77K23Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-        .nav-menu a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #667eea;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
+    function gtag() {
+      dataLayer.push(arguments);
+    }
 
-        .nav-menu a:hover::after {
-            width: 70%;
-        }
+    gtag("js", new Date());
+    gtag("config", "G-V20D77K23Q");
+  </script>
 
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            backdrop-filter: blur(10px);
-            padding: 3rem 0 1.5rem;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-            margin-top: 60px;
-            margin-bottom: 0;
-            border-radius: 0;
-            position: relative;
-            color: white;
-            min-height: auto;
-        }
+  <!-- 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "숲TV 뷰봇 및 방송 시청자 관리",
+    "url": "https://kimafreeca.github.io/afreeca/",
+    "description": "숲TV 뷰봇, SOOP 뷰봇, 팝콘TV 뷰봇, 팬더TV 뷰봇 관련 서비스 안내",
+    "inLanguage": "ko-KR"
+  }
+  </script>
 
-        .header-contact-icons {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            display: flex;
-            gap: 15px;
-        }
+  <style>
+    :root {
+      --primary: #6657e8;
+      --primary-dark: #4838c7;
+      --secondary: #7d4fd7;
+      --green: #16a56b;
+      --text: #202332;
+      --text-light: #687083;
+      --surface: #ffffff;
+      --background: #f5f7fb;
+      --border: #e6e9f1;
+      --shadow: 0 18px 45px rgba(34, 38, 61, 0.09);
+      --radius: 22px;
+    }
 
-        .header-contact-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 18px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        .header-contact-icon.kakao {
-            background: #FEE500;
-            color: #3C1E1E;
-        }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
 
-        .header-contact-icon.telegram {
-            background: #0088cc;
-            color: white;
-        }
+    body {
+      min-height: 100vh;
+      color: var(--text);
+      background: var(--background);
+      font-family:
+        Pretendard,
+        "Noto Sans KR",
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
 
-        .header-contact-icon:hover {
-            transform: translateY(-2px) scale(1.1);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-        }
+    body.modal-open {
+      overflow: hidden;
+    }
 
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: white;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            line-height: 1.2;
-        }
+    a {
+      color: inherit;
+    }
 
-        .hero-subtitle {
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.95);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
 
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            color: white;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
+    .container {
+      width: min(1180px, calc(100% - 40px));
+      margin: 0 auto;
+    }
 
-        .platforms-section {
-            margin: 0;
-            background: white;
-            border-radius: 0;
-            padding: 4rem;
-            box-shadow: none;
-            border: 1px solid #e0e0e0;
-            border-top: 3px solid #667eea;
-        }
+    /* 상단 메뉴 */
+    .site-header {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.94);
+      border-bottom: 1px solid rgba(230, 233, 241, 0.9);
+      backdrop-filter: blur(16px);
+    }
 
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 1rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
+    .nav {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
-        }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--text);
+      font-size: 1.15rem;
+      font-weight: 800;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-        .platforms-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            margin-bottom: 4rem;
-            max-width: 1200px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+    .logo-symbol {
+      width: 38px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      color: #ffffff;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(102, 87, 232, 0.24);
+    }
 
-        .platform-card {
-            background: white;
-            border-radius: 15px;
-            padding: 2.5rem;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 2px solid #e0e0e0;
-        }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      list-style: none;
+    }
 
-        .platform-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-        }
+    .nav-links a {
+      display: block;
+      padding: 10px 14px;
+      color: #4c5263;
+      border-radius: 10px;
+      font-size: 0.95rem;
+      font-weight: 650;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
 
-        .platform-logo {
-            width: 120px;
-            height: 60px;
-            margin: 0 auto 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+    .nav-links a:hover {
+      color: var(--primary);
+      background: #f0efff;
+    }
 
-        .logo-image {
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
-        }
+    .nav-contact {
+      color: #ffffff !important;
+      background: var(--primary);
+    }
 
+    .nav-contact:hover {
+      color: #ffffff !important;
+      background: var(--primary-dark) !important;
+    }
 
+    .menu-button {
+      display: none;
+      width: 42px;
+      height: 42px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: #ffffff;
+      color: var(--text);
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
 
-        .platform-name {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 1rem;
-        }
+    /* 메인 영역 */
+    main {
+      padding-top: 74px;
+    }
 
-        .platform-description {
-            color: #666;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 105px 0 92px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 15% 15%, rgba(255, 255, 255, 0.23), transparent 25%),
+        radial-gradient(circle at 88% 25%, rgba(255, 255, 255, 0.17), transparent 24%),
+        linear-gradient(135deg, #4d62e8 0%, #7253df 55%, #8a4cc7 100%);
+    }
 
-        .platform-features {
-            list-style: none;
-            text-align: left;
-        }
+    .hero::after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -230px;
+      width: 520px;
+      height: 520px;
+      border: 80px solid rgba(255, 255, 255, 0.07);
+      border-radius: 50%;
+    }
 
-        .platform-features li {
-            padding: 0.5rem 0;
-            color: #555;
-            font-size: 0.9rem;
-            position: relative;
-            padding-left: 1.5rem;
-        }
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
 
-        .platform-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #4CAF50;
-            font-weight: bold;
-        }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 22px;
+      padding: 9px 16px;
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.16);
+      border: 1px solid rgba(255, 255, 255, 0.26);
+      border-radius: 999px;
+      font-size: 0.94rem;
+      font-weight: 700;
+      backdrop-filter: blur(10px);
+    }
 
-        .platform-card.afreeca::before {
-            background: linear-gradient(135deg, #FF6B35, #F7931E);
-        }
+    .hero h1 {
+      margin-bottom: 24px;
+      font-size: clamp(2.25rem, 6vw, 4.3rem);
+      line-height: 1.18;
+      letter-spacing: -0.045em;
+    }
 
-        .platform-card.soop::before {
-            background: linear-gradient(135deg, #4CAF50, #2E7D32);
-        }
+    .hero h1 strong {
+      color: #e5ff95;
+    }
 
-        .platform-card.panda::before {
-            background: linear-gradient(135deg, #212121, #424242);
-        }
+    .hero-description {
+      max-width: 780px;
+      margin: 0 auto 34px;
+      color: rgba(255, 255, 255, 0.91);
+      font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+    }
 
-        .platform-card.popkon::before {
-            background: linear-gradient(135deg, #F44336, #D32F2F);
-        }
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
-        .platform-card.chzzk::before {
-            background: linear-gradient(135deg, #00D4FF, #0099CC);
-        }
+    .button {
+      min-height: 52px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 0 24px;
+      border: 0;
+      border-radius: 14px;
+      font-size: 1rem;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.25s ease;
+    }
 
-        .platform-card.tiktok::before {
-            background: linear-gradient(135deg, #FF0050, #000000);
-        }
+    .button:hover {
+      transform: translateY(-2px);
+    }
 
-        .platform-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-        }
+    .button-light {
+      color: var(--primary-dark);
+      background: #ffffff;
+      box-shadow: 0 12px 30px rgba(31, 35, 64, 0.18);
+    }
 
-        .features-section {
-            background: white;
-            border-radius: 0;
-            padding: 4rem;
-            margin: 0;
-            box-shadow: none;
-            border: 1px solid #e0e0e0;
-            border-top: 3px solid #764ba2;
-        }
+    .button-glass {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.32);
+    }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+    .hero-summary {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 760px;
+      margin: 46px auto 0;
+    }
 
-        .feature-item {
-            text-align: center;
-            padding: 1.5rem;
-            border-radius: 10px;
-            background: white;
-            transition: transform 0.3s ease;
-            border: 2px solid #e0e0e0;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
-        }
+    .summary-item {
+      padding: 18px 14px;
+      background: rgba(255, 255, 255, 0.12);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 16px;
+      backdrop-filter: blur(10px);
+    }
 
-        .feature-item:hover {
-            transform: translateY(-5px);
-        }
+    .summary-item strong {
+      display: block;
+      margin-bottom: 2px;
+      font-size: 1.18rem;
+    }
 
-        .feature-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1rem;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-        }
+    .summary-item span {
+      color: rgba(255, 255, 255, 0.77);
+      font-size: 0.88rem;
+    }
 
-        .feature-title {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #333;
-            margin-bottom: 0.5rem;
-        }
+    /* 공통 섹션 */
+    .section {
+      padding: 92px 0;
+    }
 
-        .feature-description {
-            color: #666;
-            font-size: 0.9rem;
-        }
+    .section-white {
+      background: #ffffff;
+    }
 
-        .contact-section {
-            text-align: center;
-            margin: 0;
-            padding: 4rem;
-            background: white;
-            border-radius: 0;
-            box-shadow: none;
-            border: 1px solid #e0e0e0;
-            border-top: 3px solid #667eea;
-        }
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 45px;
+      text-align: center;
+    }
 
-        .contact-title {
-            font-size: 2rem;
-            font-weight: 700;
-            color: #333;
-            margin-bottom: 1rem;
-        }
+    .section-label {
+      display: inline-block;
+      margin-bottom: 11px;
+      color: var(--primary);
+      font-size: 0.86rem;
+      font-weight: 850;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
 
-        .contact-description {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 2rem;
-        }
+    .section-heading h2 {
+      margin-bottom: 15px;
+      font-size: clamp(1.85rem, 4vw, 2.8rem);
+      line-height: 1.3;
+      letter-spacing: -0.035em;
+    }
 
-        .contact-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
-            border: none;
-            cursor: pointer;
-        }
+    .section-heading p {
+      color: var(--text-light);
+      font-size: 1.05rem;
+    }
 
-        .contact-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 15px 30px rgba(102, 126, 234, 0.4);
-        }
+    /* 숲TV 집중 소개 */
+    .soop-feature {
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      gap: 30px;
+      align-items: stretch;
+      margin-bottom: 42px;
+    }
 
-        .contact-buttons {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border-radius: 20px;
-            padding: 3rem;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-            z-index: 1000;
-            max-width: 600px;
-            width: 90%;
-            border: 2px solid #f0f0f0;
-        }
+    .soop-main {
+      padding: 42px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.16), transparent 26%),
+        linear-gradient(145deg, #0e9c67, #08774f);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
 
-        .contact-btn {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1.5rem 2rem;
-            border-radius: 15px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            background: white;
-            min-width: 200px;
-        }
+    .soop-mark {
+      width: 62px;
+      height: 62px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 24px;
+      background: rgba(255, 255, 255, 0.17);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 18px;
+      font-size: 1.8rem;
+    }
 
-        .contact-btn.telegram {
-            background: #0088cc;
-            color: white;
-        }
+    .soop-main h3 {
+      margin-bottom: 15px;
+      font-size: clamp(1.65rem, 3vw, 2.35rem);
+      letter-spacing: -0.03em;
+    }
 
-        .contact-btn.kakao {
-            background: #FEE500;
-            color: #3C1E1E;
-        }
+    .soop-main p {
+      margin-bottom: 24px;
+      color: rgba(255, 255, 255, 0.86);
+    }
 
-        .contact-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-        }
+    .keyword-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
 
-        .contact-button.small {
-            font-size: 1rem;
-            padding: 0.8rem 1.5rem;
-            margin-top: 1rem;
-        }
+    .keyword-chip {
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.13);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 999px;
+      font-size: 0.87rem;
+      font-weight: 700;
+    }
 
-        .contact-button.large {
-            font-size: 1.2rem;
-            padding: 1rem 2.5rem;
-            margin-top: 1rem;
-        }
+    .soop-details {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
 
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2rem;
-            }
-            
-            .platforms-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+    .detail-card {
+      padding: 26px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 10px 25px rgba(31, 35, 64, 0.05);
+    }
+
+    .detail-card i {
+      margin-bottom: 17px;
+      color: var(--green);
+      font-size: 1.45rem;
+    }
+
+    .detail-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.06rem;
+    }
+
+    .detail-card p {
+      color: var(--text-light);
+      font-size: 0.91rem;
+    }
+
+    /* 플랫폼 카드 */
+    .platform-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .platform-card {
+      position: relative;
+      overflow: hidden;
+      padding: 31px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      box-shadow: 0 12px 32px rgba(31, 35, 64, 0.055);
+      transition: 0.25s ease;
+    }
+
+    .platform-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow);
+    }
+
+    .platform-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: 5px;
+      background: var(--card-accent);
+    }
+
+    .platform-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+      background: var(--card-accent);
+      border-radius: 16px;
+      font-size: 1.35rem;
+    }
+
+    .platform-card h3 {
+      margin-bottom: 9px;
+      font-size: 1.28rem;
+    }
+
+    .platform-card > p {
+      min-height: 52px;
+      margin-bottom: 17px;
+      color: var(--text-light);
+      font-size: 0.94rem;
+    }
+
+    .platform-list {
+      list-style: none;
+    }
+
+    .platform-list li {
+      position: relative;
+      margin-top: 9px;
+      padding-left: 22px;
+      color: #4d5363;
+      font-size: 0.9rem;
+    }
+
+    .platform-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .platform-soop {
+      --card-accent: linear-gradient(135deg, #12a86f, #08784f);
+    }
+
+    .platform-popcorn {
+      --card-accent: linear-gradient(135deg, #ff5a5f, #d43a45);
+    }
+
+    .platform-panda {
+      --card-accent: linear-gradient(135deg, #333640, #17191f);
+    }
+
+    .platform-afreeca {
+      --card-accent: linear-gradient(135deg, #ff7a32, #f04f23);
+    }
+
+    .platform-chzzk {
+      --card-accent: linear-gradient(135deg, #00c98d, #00a978);
+    }
+
+    .platform-tiktok {
+      --card-accent: linear-gradient(135deg, #202229, #050506);
+    }
+
+    /* 특징 */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .feature-card {
+      padding: 29px;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+    }
+
+    .feature-card i {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 18px;
+      color: var(--primary);
+      background: #efefff;
+      border-radius: 14px;
+      font-size: 1.2rem;
+    }
+
+    .feature-card h3 {
+      margin-bottom: 8px;
+      font-size: 1.08rem;
+    }
+
+    .feature-card p {
+      color: var(--text-light);
+      font-size: 0.91rem;
+    }
+
+    /* 문의 */
+    .contact-section {
+      padding: 88px 0;
+    }
+
+    .contact-box {
+      position: relative;
+      overflow: hidden;
+      padding: 55px 35px;
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(255, 255, 255, 0.18), transparent 28%),
+        linear-gradient(135deg, #4f5fe4, #7949ce);
+      border-radius: 28px;
+      box-shadow: 0 25px 55px rgba(78, 68, 196, 0.23);
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 13px;
+      font-size: clamp(1.8rem, 4vw, 2.65rem);
+    }
+
+    .contact-box p {
+      max-width: 650px;
+      margin: 0 auto 28px;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    /* 푸터 */
+    footer {
+      padding: 32px 0;
+      color: #72798a;
+      background: #ffffff;
+      border-top: 1px solid var(--border);
+      font-size: 0.88rem;
+      text-align: center;
+    }
+
+    /* 문의 팝업 */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 2000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background: rgba(18, 20, 30, 0.64);
+      backdrop-filter: blur(5px);
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .contact-modal {
+      position: relative;
+      width: min(520px, 100%);
+      padding: 36px;
+      background: #ffffff;
+      border-radius: 24px;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, 0.28);
+      animation: modalIn 0.25s ease;
+    }
+
+    @keyframes modalIn {
+      from {
+        opacity: 0;
+        transform: translateY(15px) scale(0.98);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      width: 38px;
+      height: 38px;
+      border: 0;
+      border-radius: 50%;
+      background: #f2f3f7;
+      color: #646b7b;
+      font-size: 1.15rem;
+      cursor: pointer;
+    }
+
+    .contact-modal h2 {
+      margin-bottom: 8px;
+      font-size: 1.65rem;
+      text-align: center;
+    }
+
+    .contact-modal > p {
+      margin-bottom: 25px;
+      color: var(--text-light);
+      text-align: center;
+    }
+
+    .contact-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .contact-option {
+      min-height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 20px;
+      border-radius: 18px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .contact-option:hover {
+      transform: translateY(-3px);
+    }
+
+    .contact-option i {
+      font-size: 2rem;
+    }
+
+    .contact-option strong {
+      font-size: 1.05rem;
+    }
+
+    .contact-option span {
+      font-size: 0.84rem;
+      opacity: 0.78;
+    }
+
+    .contact-kakao {
+      color: #352707;
+      background: #fee500;
+    }
+
+    .contact-telegram {
+      color: #ffffff;
+      background: #168dcc;
+    }
+
+    .modal-note {
+      margin-top: 20px;
+      padding: 13px;
+      color: #606778;
+      background: #f6f7fa;
+      border-radius: 12px;
+      font-size: 0.86rem;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .soop-feature {
+        grid-template-columns: 1fr;
+      }
+
+      .platform-grid,
+      .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 700px) {
+      .container {
+        width: min(100% - 28px, 1180px);
+      }
+
+      .menu-button {
+        display: block;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 74px;
+        right: 14px;
+        left: 14px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 4px;
+        padding: 13px;
+        background: #ffffff;
+        border: 1px solid var(--border);
+        border-radius: 16px;
+        box-shadow: var(--shadow);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 14px;
+      }
+
+      .hero {
+        padding: 78px 0 70px;
+      }
+
+      .hero-summary {
+        grid-template-columns: 1fr;
+        max-width: 360px;
+      }
+
+      .section {
+        padding: 70px 0;
+      }
+
+      .soop-main {
+        padding: 30px 25px;
+      }
+
+      .soop-details,
+      .platform-grid,
+      .feature-grid,
+      .contact-options {
+        grid-template-columns: 1fr;
+      }
+
+      .platform-card > p {
+        min-height: auto;
+      }
+
+      .contact-box {
+        padding: 42px 22px;
+      }
+
+      .contact-modal {
+        padding: 34px 22px 24px;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<body>
-    <!-- 네비게이션 바 -->
-    <nav>
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">방송국 뷰어</a>
-            <ul class="nav-menu">
-                <li><a href="#home">홈</a></li>
-                <li><a href="#services">서비스</a></li>
-                <li><a href="#features">특징</a></li>
-                <li><a href="#contact">연락처</a></li>
-            </ul>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#home" class="logo" aria-label="홈으로 이동">
+        <span class="logo-symbol">
+          <i class="fa-solid fa-play"></i>
+        </span>
+        <span>방송 시청자 관리</span>
+      </a>
+
+      <button
+        type="button"
+        class="menu-button"
+        id="menuButton"
+        aria-label="메뉴 열기"
+        aria-expanded="false"
+      >
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">홈</a></li>
+        <li><a href="#soop">숲TV 뷰봇</a></li>
+        <li><a href="#platforms">지원 플랫폼</a></li>
+        <li><a href="#features">서비스 안내</a></li>
+        <li>
+          <a href="#contact" class="nav-contact">문의하기</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="eyebrow">
+          <i class="fa-solid fa-circle-check"></i>
+          365일 24시간 문의 가능
         </div>
-    </nav>
 
-    <header id="home">
-        <div class="container">
-            <div class="header-contact-icons">
-                <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="header-contact-icon kakao" title="카카오톡 문의">
-                    <i class="fas fa-comment"></i>
-                </a>
-                <a href="https://t.me/afreeca101" target="_blank" class="header-contact-icon telegram" title="텔레그램 문의">
-                    <i class="fab fa-telegram"></i>
-                </a>
-            </div>
-            <h1 class="hero-title">방송국 시청 뷰어 서비스</h1>
-            <p class="hero-subtitle">한국 IP 전용 1인1아이피로 아프리카TV, 숲TV, 팬더TV, 팝콘TV의 실시간 방송을 시청하는 최고의 뷰어 서비스</p>
-            <span class="hero-badge">365일 24시간 연중무휴</span>
-            <br>
-            <a href="#" class="contact-button large" onclick="toggleContact(event)">문의하기</a>
+        <h1>
+          <strong>숲TV 뷰봇</strong> · SOOP 뷰봇<br>
+          방송 시청자 관리 서비스
+        </h1>
+
+        <p class="hero-description">
+          숲TV와 SOOP을 중심으로 팝콘TV, 팬더TV, 아프리카TV 등
+          다양한 실시간 방송 플랫폼의 시청자 관리 서비스를 안내합니다.
+        </p>
+
+        <div class="hero-buttons">
+          <button type="button" class="button button-light open-contact">
+            <i class="fa-regular fa-comments"></i>
+            서비스 문의
+          </button>
+
+          <a href="#soop" class="button button-glass">
+            <i class="fa-solid fa-arrow-down"></i>
+            자세히 보기
+          </a>
         </div>
-    </header>
 
-    <main class="container">
-        <section class="platforms-section" id="services">
-            <h2 class="section-title">지원 플랫폼</h2>
-            <div class="platforms-grid">
-                <div class="platform-card afreeca">
-                    <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=dkVK297lSk2DxhFpMTjWnRMsqTx5kPftnpkUa9HhCoQWS53puenMirBeNnKy96RsBB1Wot4V%2BFF9nht6g%2BjVTuaxUjBorSeRjC159iqgHNhz&u2=gexnxt4QxB2cWWGr&width=2560" alt="아프리카TV 로고" class="logo-image">
-                    </div>
-                    <h3 class="platform-name">아프리카TV 뷰어</h3>
-                    <p class="platform-description">실시간 방송 시청, 구독자 증가</p>
-                    <ul class="platform-features">
-                        <li>시청 시간 증가</li>
-                        <li>한국 IP 전용</li>
-                        <li>1인 1아이피</li>
-                    </ul>
-                </div>
+        <div class="hero-summary">
+          <div class="summary-item">
+            <strong>SOOP 중심</strong>
+            <span>숲TV 관련 서비스 안내</span>
+          </div>
 
-                <div class="platform-card soop">
-                    <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=OkxQrcG%2FRmlj3FIKMvwTGjJdMQab%2F4lVEUfyjstoKWJleEcftaCBtdkh5Qw8WCPjZ4pGdUClKeQlukNEeh0Ui7%2F88rIh99kwYMqOStXFnddQ9FU7ni%2F3BgBeVVFFWMoo8KvlD4qWT26E44hDgXTIwFbQ0zjwgwRNAlZR75z2vMY%3D&u2=bui2l7trPQ30fQ%2BP&width=2560" alt="숲TV 로고" class="logo-image">
-                    </div>
-                    <h3 class="platform-name">숲TV 뷰어</h3>
-                    <p class="platform-description">숲TV 방송 시청 뷰어 서비스</p>
-                    <ul class="platform-features">
-                        <li>시청자 증가</li>
-                        <li>한국 IP 전용</li>
-                        <li>1인 1아이피</li>
-                    </ul>
-                </div>
+          <div class="summary-item">
+            <strong>다양한 플랫폼</strong>
+            <span>플랫폼별 운영 상담</span>
+          </div>
 
-                <div class="platform-card panda">
-                    <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=cs8SINdAi6CiE35yhpoRCW9dmVgPEcpnyqfIoia3%2F1ZXCjI9CWnKtNHOmuXKcNRuFvqJWb%2FYo6lLBA940g9oMgpmw3QhraMagbmTD2dF%2BMCrbVab%2Fa%2FOnWL2oyUkmbomTc%2F3KKOhM8%2BB4zMkzmxapZKeFKG4XwUr%2By0Vz5uLSE4%3D&u2=BXNbACAspXNTST5X&width=2560" alt="팬더TV 로고" class="logo-image">
-                    </div>
-                    <h3 class="platform-name">팬더TV 뷰어</h3>
-                    <p class="platform-description">팬더TV 실시간 방송 시청 서비스</p>
-                    <ul class="platform-features">
-                        <li>방송 모니터링</li>
-                        <li>한국 IP 전용</li>
-                        <li>1인 1아이피</li>
-                    </ul>
-                </div>
+          <div class="summary-item">
+            <strong>빠른 문의</strong>
+            <span>카카오톡·텔레그램 상담</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-                <div class="platform-card popkon">
-                    <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=0xHQa7gJF96UzeUl3exsx8IJ2QiAHK4n3W%2BShLSjIyrdWzu%2FihcRtk3TyavDVrYBZ7XDqgd%2BhvMRkhfxDVnz96QWXhwB4lKGFLyTDq8aG2xU0wIdss6cGAo6sksBYqAVutD5N7n8XIhPoxa%2FRgc9jAe638xYBvXTe432IMexn9q8NFSo&u2=4brLBqisQKpAz82o&width=2560" alt="팝콘TV 로고" class="logo-image">
-                    </div>
-                    <h3 class="platform-name">팝콘TV 뷰어</h3>
-                    <p class="platform-description">팝콘TV 방송 시청 뷰어</p>
-                    <ul class="platform-features">
-                        <li>실시간 모니터링</li>
-                        <li>시청 통계</li>
-                        <li>한국 IP 전용</li>
-                        <li>1인 1아이피</li>
-                    </ul>
-                </div>
+    <section class="section section-white" id="soop">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">SOOP VIEWER SERVICE</span>
+          <h2>숲TV 뷰봇 · SOOP 뷰봇 안내</h2>
+          <p>
+            숲TV 방송 운영과 시청자 관리에 필요한 내용을 확인하고
+            방송 환경에 맞는 상담을 받을 수 있습니다.
+          </p>
+        </div>
 
-                <div class="platform-card chzzk">
-                    <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=mm01VcUJ6rHUPLiPVjLYmWHCBusCEqav9uZh5VcuCS0dDkJY273fgU3Bl92uqb5myQ%2BQE5FJXqfe5mKKdfHvZ7Su7y34Tq0%3D&u2=T2dXF4xevncmu0tj&width=2560" alt="치지직 로고" class="logo-image">
-                    </div>
-                    <h3 class="platform-name">치지직 뷰어</h3>
-                    <p class="platform-description">치지직 실시간 방송 시청 서비스</p>
-                    <ul class="platform-features">
-                        <li>실시간 스트리밍</li>
-                        <li>한국 IP 전용</li>
-                        <li>1인 1아이피</li>
-                    </ul>
-                </div>
-
-                <div class="platform-card tiktok">
-                    <div class="platform-logo">
-                        <img src="https://sspark.genspark.ai/cfimages?u1=CdS%2Be%2FYPfKG8uftiL2zHfjYwyRPrlmcJMj3imnvJVkxbBPeMq9bdVD2wMVCfPYJlNtPj0Ro6E%2FMKr%2FN7JDQt0SRNAJZVBYzFEN7Ay%2BK58UXNv97BzbyNdUwF10lKwjizo7bS&u2=oO2etA7j71eSO4E5&width=2560" alt="틱톡 로고" class="logo-image">
-                    </div>
-                    <h3 class="platform-name">틱톡 뷰어</h3>
-                    <p class="platform-description">틱톡 실시간 스트리밍 시청 서비스</p>
-                    <ul class="platform-features">
-                        <li>라이브 스트리밍</li>
-                        <li>한국 IP 전용</li>
-                        <li>1인 1아이피</li>
-                    </ul>
-                </div>
+        <div class="soop-feature">
+          <article class="soop-main">
+            <div class="soop-mark">
+              <i class="fa-solid fa-tree"></i>
             </div>
-        </section>
 
-        <section class="features-section" id="features">
-            <h2 class="section-title">주요 기능</h2>
-            <p style="text-align: center; color: #666; font-size: 1.1rem; margin-bottom: 2rem;">
-                최첨단 뷰어 기술로 방송을 더욱 효과적으로
+            <h3>숲TV 방송 시청자 관리</h3>
+
+            <p>
+              숲TV와 SOOP 방송 환경을 기준으로 방송 시간, 필요한 규모,
+              운영 방식 등을 확인한 뒤 관련 서비스를 안내합니다.
             </p>
-            <div class="features-grid">
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-cog"></i>
-                    </div>
-                    <h4 class="feature-title">스마트 시스템</h4>
-                    <p class="feature-description">완전 자동화된 시청 시스템으로 24시간 중단 없이 운영</p>
-                </div>
 
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h4 class="feature-title">실시간 분석</h4>
-                    <p class="feature-description">방송 시청 데이터를 실시간으로 분석하여 효과 극대화</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h4 class="feature-title">안전한 운영</h4>
-                    <p class="feature-description">검증된 안전한 방법으로 방송 플랫폼 정책 준수</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h4 class="feature-title">다중 계정 지원</h4>
-                    <p class="feature-description">여러 계정으로 동시에 방송 시청 가능</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-map-marker-alt"></i>
-                    </div>
-                    <h4 class="feature-title">한국 IP 전용</h4>
-                    <p class="feature-description">한국 IP를 사용하여 안정적인 서비스 제공</p>
-                </div>
-
-                <div class="feature-item">
-                    <div class="feature-icon">
-                        <i class="fas fa-user-check"></i>
-                    </div>
-                    <h4 class="feature-title">1인 1아이피</h4>
-                    <p class="feature-description">개인별 전용 IP로 안전하고 안정적인 운영</p>
-                </div>
+            <div class="keyword-chips">
+              <span class="keyword-chip">숲TV 뷰봇</span>
+              <span class="keyword-chip">SOOP 뷰봇</span>
+              <span class="keyword-chip">숲뷰봇</span>
+              <span class="keyword-chip">방송 시청자 관리</span>
             </div>
-        </section>
+          </article>
 
-        <section class="contact-section" id="contact">
-            <h2 class="contact-title">연중무휴 24시간 운영</h2>
-            <p class="contact-description">뷰어 봇 서비스에 대해 궁금한 점이 있으신가요?</p>
-            <a href="#" class="contact-button large" onclick="toggleContact(event)">문의하기</a>
-        </section>
+          <div class="soop-details">
+            <article class="detail-card">
+              <i class="fa-solid fa-desktop"></i>
+              <h3>실시간 방송 안내</h3>
+              <p>방송 일정과 운영 환경에 맞춰 이용 내용을 안내합니다.</p>
+            </article>
 
-        <!-- 문의하기 팝업 -->
-        <div class="contact-buttons" id="contactButtons">
-            <div style="position: absolute; top: 15px; right: 20px; cursor: pointer; font-size: 28px; color: #999; font-weight: bold; width: 30px; height: 30px; display: flex; align-items: center; justify-content: center; border-radius: 50%;" onclick="toggleContact(event)" onmouseover="this.style.color='#333'; this.style.background='#f5f5f5';" onmouseout="this.style.color='#999'; this.style.background='transparent';">×</div>
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <h3 style="color: #333; font-size: 1.5rem; margin-bottom: 0.5rem;">궁금한 점이 있으신가요?</h3>
-                <p style="color: #666; font-size: 1.1rem;">아래 채널로 문의해주세요.</p>
-            </div>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="https://open.kakao.com/o/s6ecK27h" target="_blank" class="contact-btn kakao">
-                    <i class="fas fa-comment" style="font-size: 2rem;"></i>
-                    <div style="text-align: center;">
-                        <div style="font-weight: 700; font-size: 1.1rem;">카카오톡 문의</div>
-                        <div style="font-size: 0.9rem; color: #666; margin-top: 0.3rem;">실시간 상담 가능</div>
-                        <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
-                    </div>
-                </a>
-                <a href="https://t.me/afreeca101" target="_blank" class="contact-btn telegram">
-                    <i class="fab fa-telegram" style="font-size: 2rem;"></i>
-                    <div style="text-align: center;">
-                        <div style="font-weight: 700; font-size: 1.1rem;">텔레그램 문의</div>
-                        <div style="font-size: 0.9rem; color: #ccc; margin-top: 0.3rem;">빠른 응답 보장</div>
-                        <div style="font-size: 0.8rem; color: #4CAF50; margin-top: 0.2rem;">접속중</div>
-                    </div>
-                </a>
-            </div>
-            <div style="text-align: center; margin-top: 1.5rem; color: #666; font-size: 0.9rem;">
-                <div>운영시간: 365일 24시간 연중무휴</div>
-                <div style="margin-top: 0.5rem; color: #4CAF50; font-weight: 600;">평균 응답시간: 5분 이내</div>
-            </div>
+            <article class="detail-card">
+              <i class="fa-solid fa-chart-line"></i>
+              <h3>운영 규모 상담</h3>
+              <p>방송 상황과 필요한 시청자 규모를 기준으로 상담합니다.</p>
+            </article>
+
+            <article class="detail-card">
+              <i class="fa-solid fa-headset"></i>
+              <h3>빠른 문의</h3>
+              <p>카카오톡과 텔레그램을 통해 관련 내용을 확인할 수 있습니다.</p>
+            </article>
+
+            <article class="detail-card">
+              <i class="fa-solid fa-clock"></i>
+              <h3>상시 문의 가능</h3>
+              <p>365일 운영되며 상담 가능 여부는 문의 채널에서 확인합니다.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="platforms">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">SUPPORTED PLATFORMS</span>
+          <h2>지원 플랫폼</h2>
+          <p>
+            플랫폼별 방송 환경에 맞는 시청자 관리 서비스 정보를 안내합니다.
+          </p>
         </div>
 
-    <script>
-        // 부드러운 스크롤링
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+        <div class="platform-grid">
+          <article class="platform-card platform-soop">
+            <div class="platform-icon">
+              <i class="fa-solid fa-tree"></i>
+            </div>
+            <h3>숲TV · SOOP 뷰봇</h3>
+            <p>숲TV와 SOOP 방송을 위한 시청자 관리 서비스 안내.</p>
+            <ul class="platform-list">
+              <li>실시간 방송 운영 상담</li>
+              <li>방송 규모별 안내</li>
+              <li>빠른 문의 지원</li>
+            </ul>
+          </article>
 
-        // 문의하기 팝업 토글
-        function toggleContact(event) {
-            event.preventDefault();
-            const contactButtons = document.getElementById('contactButtons');
-            contactButtons.style.display = contactButtons.style.display === 'block' ? 'none' : 'block';
-        }
+          <article class="platform-card platform-popcorn">
+            <div class="platform-icon">
+              <i class="fa-solid fa-clapperboard"></i>
+            </div>
+            <h3>팝콘TV 뷰봇</h3>
+            <p>팝콘TV 방송 환경을 기준으로 한 시청자 관리 서비스 안내.</p>
+            <ul class="platform-list">
+              <li>방송 일정별 상담</li>
+              <li>운영 규모 확인</li>
+              <li>실시간 문의</li>
+            </ul>
+          </article>
 
-        // 네비게이션 바 스크롤 효과
-        window.addEventListener('scroll', function() {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.15)';
-            } else {
-                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.1)';
-            }
-        });
-    </script>
+          <article class="platform-card platform-panda">
+            <div class="platform-icon">
+              <i class="fa-solid fa-paw"></i>
+            </div>
+            <h3>팬더TV 뷰봇</h3>
+            <p>팬더TV 라이브 방송 운영에 필요한 관련 서비스 안내.</p>
+            <ul class="platform-list">
+              <li>라이브 방송 상담</li>
+              <li>시청자 관리 안내</li>
+              <li>플랫폼별 운영 확인</li>
+            </ul>
+          </article>
+
+          <article class="platform-card platform-afreeca">
+            <div class="platform-icon">
+              <i class="fa-solid fa-video"></i>
+            </div>
+            <h3>아프리카TV 뷰봇</h3>
+            <p>아프리카TV 실시간 방송을 위한 시청자 관리 정보 안내.</p>
+            <ul class="platform-list">
+              <li>방송 운영 상담</li>
+              <li>시간대별 문의</li>
+              <li>서비스 가능 여부 확인</li>
+            </ul>
+          </article>
+
+          <article class="platform-card platform-chzzk">
+            <div class="platform-icon">
+              <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <h3>치지직 뷰봇</h3>
+            <p>치지직 스트리밍 방송에 필요한 운영 관련 정보 안내.</p>
+            <ul class="platform-list">
+              <li>스트리밍 환경 상담</li>
+              <li>방송 규모 확인</li>
+              <li>운영 방법 안내</li>
+            </ul>
+          </article>
+
+          <article class="platform-card platform-tiktok">
+            <div class="platform-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+            <h3>틱톡 라이브</h3>
+            <p>틱톡 라이브 스트리밍 운영과 관련된 시청자 관리 안내.</p>
+            <ul class="platform-list">
+              <li>라이브 방송 문의</li>
+              <li>플랫폼별 상담</li>
+              <li>운영 가능 여부 확인</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-white" id="features">
+      <div class="container">
+        <div class="section-heading">
+          <span class="section-label">SERVICE INFORMATION</span>
+          <h2>서비스 안내</h2>
+          <p>
+            방송 플랫폼과 운영 목적을 확인한 후 필요한 내용을 상담합니다.
+          </p>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>플랫폼별 상담</h3>
+            <p>각 방송 플랫폼의 환경과 요청 내용에 맞춰 안내합니다.</p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fa-solid fa-chart-column"></i>
+            <h3>규모별 안내</h3>
+            <p>필요한 시청자 규모와 방송 시간을 확인해 상담합니다.</p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fa-solid fa-clock-rotate-left"></i>
+            <h3>방송 일정 확인</h3>
+            <p>방송 시작 시간과 운영 기간을 기준으로 가능 여부를 확인합니다.</p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fa-solid fa-message"></i>
+            <h3>빠른 문의 채널</h3>
+            <p>카카오톡과 텔레그램을 통해 직접 문의할 수 있습니다.</p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fa-solid fa-display"></i>
+            <h3>실시간 방송 중심</h3>
+            <p>라이브 방송 환경을 기준으로 필요한 내용을 안내합니다.</p>
+          </article>
+
+          <article class="feature-card">
+            <i class="fa-solid fa-circle-info"></i>
+            <h3>이용 전 확인</h3>
+            <p>세부 운영 방식과 가능 여부는 상담을 통해 확인할 수 있습니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <h2>숲TV 뷰봇 서비스 문의</h2>
+          <p>
+            숲TV, SOOP, 팝콘TV, 팬더TV 등 플랫폼별 서비스 관련 내용은
+            문의 채널에서 확인할 수 있습니다.
+          </p>
+
+          <button type="button" class="button button-light open-contact">
+            <i class="fa-regular fa-paper-plane"></i>
+            문의 채널 열기
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      숲TV 뷰봇 · SOOP 뷰봇 · 팝콘TV 뷰봇 · 팬더TV 뷰봇
+    </div>
+  </footer>
+
+  <div
+    class="modal-backdrop"
+    id="contactModal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="contactModalTitle"
+  >
+    <div class="contact-modal">
+      <button
+        type="button"
+        class="modal-close"
+        id="modalClose"
+        aria-label="문의창 닫기"
+      >
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+
+      <h2 id="contactModalTitle">문의 채널 선택</h2>
+      <p>아래 채널 중 편한 방법으로 문의해주세요.</p>
+
+      <div class="contact-options">
+        <a
+          href="https://open.kakao.com/o/s6ecK27h"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-option contact-kakao"
+        >
+          <i class="fa-solid fa-comment"></i>
+          <strong>카카오톡 문의</strong>
+          <span>오픈채팅으로 이동</span>
+        </a>
+
+        <a
+          href="https://t.me/afreeca101"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-option contact-telegram"
+        >
+          <i class="fa-brands fa-telegram"></i>
+          <strong>텔레그램 문의</strong>
+          <span>@afreeca101</span>
+        </a>
+      </div>
+
+      <div class="modal-note">
+        서비스 가능 여부와 세부 내용은 상담을 통해 확인해주세요.
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const menuButton = document.getElementById("menuButton");
+    const navLinks = document.getElementById("navLinks");
+    const contactModal = document.getElementById("contactModal");
+    const modalClose = document.getElementById("modalClose");
+    const contactButtons = document.querySelectorAll(".open-contact");
+
+    function openModal() {
+      contactModal.classList.add("active");
+      document.body.classList.add("modal-open");
+    }
+
+    function closeModal() {
+      contactModal.classList.remove("active");
+      document.body.classList.remove("modal-open");
+    }
+
+    menuButton.addEventListener("click", function () {
+      const isOpen = navLinks.classList.toggle("active");
+
+      menuButton.setAttribute("aria-expanded", String(isOpen));
+      menuButton.innerHTML = isOpen
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        navLinks.classList.remove("active");
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    contactButtons.forEach(function (button) {
+      button.addEventListener("click", openModal);
+    });
+
+    modalClose.addEventListener("click", closeModal);
+
+    contactModal.addEventListener("click", function (event) {
+      if (event.target === contactModal) {
+        closeModal();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>
