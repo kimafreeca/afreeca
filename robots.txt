@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://kimafreeca.github.io/afreeca/sitemap_v2.xml
